@@ -2,7 +2,9 @@
 
 
 
-Url decode in commadline.
+Useful aliases:
 
-```python3 -c "import sys; from urllib.parse import unquote_plus; print(unquote_plus(sys.stdin.read()));" < input_file```
+1. `urldecode` - decodes url encoded file with python's `urllib.parse`
+
+   Example:`urldecode < file.txt`
 
