@@ -1,0 +1,25 @@
+session_name: dev
+windows:
+  - window_name: dev-win
+    layout: tiled
+    shell_command_before:
+      - cd ~/ # run as a first command in all panes
+    panes:
+      - shell_command: # pane no. 1
+        #- cd /var/log # run multiple commands in this pane
+        #- ls -al | grep \.log
+        - watch nvidia-smi
+      - htop # pane no. 2
+      - shell_command:
+        - cd ~/repos/  # pane no. 3
+        #- source ../venv/bin/activate
+      - shell_command: # pane no. 4
+        - cd ~/repos/
+        #- source ../venv/bin/activate
+        #- vim trainer.py
+  - window_name: data-win
+    panes:
+      - shell_command:
+        - cd ~/experiments
+      - shell_command:
+        - cd ~/data
