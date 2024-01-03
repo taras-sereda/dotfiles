@@ -1,6 +1,7 @@
 session_name: dev
 global_options:
-  history-limit: 9999
+  history-limit: 99999
+  mode-keys: vi
 windows:
   - window_name: dev-win
     layout: tiled
