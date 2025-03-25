@@ -17,7 +17,7 @@ Plug 'airblade/vim-gitgutter'
 " includes, flake8 which is too verbose.
 let g:ale_linters = {'python': ['ruff'], 'rust': ['cargo', 'analyzer']}
 "let g:ale_linters = {'rust': ['cargo', 'analyzer']}
-let g:ale_fixers = {'*': ['trim_whitespace', 'remove_trailing_lines'], 'python': ['ruff'], 'rust': ['rustfmt']}
+let g:ale_fixers = {'*': ['trim_whitespace', 'remove_trailing_lines'], 'python': ['ruff', 'ruff_format'], 'rust': ['rustfmt']}
 let g:ale_linetes_explicit = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
@@ -28,6 +28,8 @@ let g:ale_warn_about_trailing_whitespace = 0
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " ctrl+f - open file explorer and find matches with fzf
@@ -46,6 +48,7 @@ nnoremap <C-p> :ALEGoToDefinition<CR>
 
 " toggle line numbers with F2
 nnoremap <F2> :set number!<CR>
-
+nnoremap <F3> :NERDTreeToggle<CR>
+nnoremap <F4> :ALEFix<CR>
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
