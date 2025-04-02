@@ -1,7 +1,12 @@
 # dotfiles
 
-## Installation:
-1. cp .tmux.conf ~/
+## Installation
+1. cp .tmux.conf $HOME/
+1. cp .vimrc $HOME/
+
+## Vimrc Post Installation
+1. Open vim and run `:PlugInstall` to install plugins listed in the config
+1. YouCompleteMe requires to run additional installation step: `cd $HOME/.vim/plugged/YouCompleteMe && python3 install.py --clang-completer`
 
 
 ## tmuxp

@@ -7,11 +7,10 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 Plug 'rust-lang/rust.vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " For Python I prefere to use only pyright, since default set of linters
 " includes, flake8 which is too verbose.
