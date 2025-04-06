@@ -1,6 +1,9 @@
+" opens `:help pattern` completions in the status bar
+set wildmenu
+" adds line numbers
 set number
-set backspace=indent,eol,start
 
+set backspace=indent,eol,start
 syntax enable
 filetype plugin indent on
 
