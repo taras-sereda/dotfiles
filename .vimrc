@@ -43,15 +43,27 @@ nnoremap <silent> <leader>b :Buffers<CR>
 " \+c - get list of git commits
 nnoremap <silent> <leader>c :Commits<CR>
 
-" ctrl+p - go to symbol definition.
+" ctrl+p - ALE go to symbol definition
 " ctrl+o - jump to the previous location(default ALE's jump-motion)
 " ctrl+i - jump to the next location
 nnoremap <C-p> :ALEGoToDefinition<CR>
 
-" toggle line numbers with F2
+" \+\+w - find symbol in a workspace
+nmap <leader><leader>w <Plug>(YCMFindSymbolInWorkspace)
+" \+\+d - go to symbol definition
+nmap <leader><leader>d :YcmCompleter GoToDefinition<CR>
+" figure why YCMFindSymbolInDocument is not able to find symbols in doc
+"nmap <leader><leader>d <Plug>(YCMFindSymbolInDocument)
+
+" F1 - default vim help
+
+" F2 - toggle line numbers
 nnoremap <F2> :set number!<CR>
+" F3 - toggle files list view
 nnoremap <F3> :NERDTreeToggle<CR>
+" F4 - run fixers for current buffer
 nnoremap <F4> :ALEFix<CR>
+" F5 - toggle git gutter bar
 nnoremap <F5> :GitGutterToggle<CR>
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
