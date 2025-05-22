@@ -7,6 +7,7 @@
 1. cp .fdignore to git repo
 
 ## Dependecies
+1. vim-plug - vim plugin manager. Follow official installation [instructions](https://github.com/junegunn/vim-plug?tab=readme-ov-file#vim) to install
 1. fd - `cargo install fd-find`
 1. fzf - follow official insallation instratcion to [install from sources](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git)
 
