@@ -34,6 +34,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdtree'
 call plug#end()
 
+function! ClangFormat()
+    let l:save_pos = getpos('.')
+    %!clang-format
+    call setpos('.', l:save_pos)
+endfunction
+
 " ctrl+f - open file explorer and find matches with fzf
 nnoremap <silent> <C-f> :Files<CR>
 " \+f - search keyword in files
@@ -65,5 +71,7 @@ nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :ALEFix<CR>
 " F5 - toggle git gutter bar
 nnoremap <F5> :GitGutterToggle<CR>
+" F6 - format C/C++ code with clang-format
+nnoremap <F6> :call ClangFormat()<CR>
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
