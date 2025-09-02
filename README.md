@@ -1,10 +1,11 @@
 # dotfiles
 
 ## Installation
-1. cp .tmux.conf $HOME/
-1. cp .vimrc $HOME/
+1. tmux conf: `cp .tmux.conf $HOME/`
+1. vim conf: `cp .vimrc $HOME/`
 1. cp relevant part of .bashrc to $HOME/.bashrc
-1. cp .fdignore to git repo
+1. fd ignore conf for rust's fd: `cp .fdignore <git-repo>`
+1. For fish shell: `cp config.fish $HOME/.config/fish/`
 
 ## Dependecies
 1. vim-plug - vim plugin manager. Follow official installation [instructions](https://github.com/junegunn/vim-plug?tab=readme-ov-file#vim) to install
@@ -14,7 +15,6 @@
 ## Vimrc Post Installation
 1. Open vim and run `:PlugInstall` to install plugins listed in the config
 1. YouCompleteMe requires to run additional installation step: `cd $HOME/.vim/plugged/YouCompleteMe && python3 install.py --clang-completer`
-
 
 ## tmuxp
 1. mkdir $HOME/.config/tmuxp
