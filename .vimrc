@@ -3,6 +3,12 @@ set wildmenu
 " adds line numbers
 set number
 
+" automatically re-read file on change
+set autoread
+
+" Check for file changes every second
+call timer_start(1000, {-> execute('checktime')}, {'repeat': -1})
+
 set backspace=indent,eol,start
 syntax enable
 filetype plugin indent on
