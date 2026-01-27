@@ -26,3 +26,5 @@
 
    Example:`urldecode < file.txt`
 
+## firefox
+1. make tabs smaller. Open `about:config` set `browser.uidensity=1`
