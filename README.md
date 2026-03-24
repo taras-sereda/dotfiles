@@ -6,6 +6,8 @@
 1. cp relevant part of .bashrc to $HOME/.bashrc
 1. fd ignore conf for rust's fd: `cp .fdignore <git-repo>`
 1. For fish shell: `cp config.fish $HOME/.config/fish/`
+1. git conf global: `cp .gitconfig $HOME/`
+1. git conf local repo: `cd <git-repo> && git config --local include.path .gitconfig`
 
 ## Dependecies
 1. vim-plug - vim plugin manager. Follow official installation [instructions](https://github.com/junegunn/vim-plug?tab=readme-ov-file#vim) to install
