@@ -1,7 +1,8 @@
 [user]
 	name = Curious Creature (Taras Sereda)
 	email = taras.y.sereda@proton.me
+
 [push]
-	autoSetupRemote = true
+	autoSetupRemote = true # no more --set-upstream
 
 # Слава Україні!
