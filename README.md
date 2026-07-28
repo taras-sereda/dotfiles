@@ -1,7 +1,7 @@
 # dotfiles
 
 ## Installation
-1. tmux conf: `cp .tmux.conf $HOME/`
+1. tmux conf: `cp .tmux.conf $HOME/ && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 1. vim conf: `cp .vimrc $HOME/`
 1. cp relevant part of .bashrc to $HOME/.bashrc
 1. fd ignore conf for rust's fd: `cp .fdignore <git-repo>`
