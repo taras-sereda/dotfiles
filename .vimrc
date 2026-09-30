@@ -20,6 +20,7 @@ Plug 'dense-analysis/ale'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'tpope/vim-fugitive'
 
 " For Python I prefere to use only pyright, since default set of linters
 " includes, flake8 which is too verbose.
